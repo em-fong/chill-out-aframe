@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> chill out </title>
+  <meta name="description" content="chill out vr">
+
+  <!-- a lot o' heckin imports -->
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+</head>
+
+
+<body>
+  <a-scene>
+
+    <!-- custom font -->
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+    </a-assets>
+
+    <!-- ocean primitive -->
+    <a-ocean color="#3d3d5c" width="120" depth="20" density="25"></a-ocean>
+
+    <!-- lighting -->
+    <a-entity light="type: ambient; color: #DED"></a-entity>
+
+    <!-- beginning of script-->
+    <a-entity text-geometry="value: Welcome." material="color: white;" position="-1.5 3 -3.5">
+      <a-animation attribute="position" begin="4000" dur="40000" from="-1.5 3 -3.5" to="-1.5 100 -3.5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: How have you been?" material="color: white;" position="-3 2 -3.5" visible="false">
+      <a-animation attribute="visible" begin="4000" to="true"></a-animation>
+      <a-animation attribute="position" begin="8000" dur="40000" from="-3 2 -3.5" to="-1.5 100 -3.5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: Take a deep breath..." material="color: white;" position="-3.5 2 -3.5" visible="false">
+      <a-animation attribute="visible" begin="16000" to="true"></a-animation>
+      <a-animation attribute="position" begin="16700" dur="40000" from="-3.5 2 -3.5" to="-3.5 100 -3.5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: ... and exhale." material="color: white;" position="-2.5 2 -3.5" visible="false">
+      <a-animation attribute="visible" begin="23000" to="true"></a-animation>
+      <a-animation attribute="position" begin="25000" dur="40000" from="-2.5 2 -3.5" to="-2.5 100 -3.5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: You are floating in a vast ocean," material="color: white;" position="-5 3 -5" visible="false">
+      <a-animation attribute="visible" begin="32000" to="true"></a-animation>
+      <a-animation attribute="position" begin="36000" dur="40000" from="-5 3 -5" to="-5 100 -5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: being gently rocked by the tides." material="color: white;" position="-5 2 -5" visible="false">
+      <a-animation attribute="visible" begin="32000" to="true"></a-animation>
+      <a-animation attribute="position" begin="36000" dur="40000" from="-5 2 -5" to="-5 100 -5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: The waters are calm," material="color: white;" position="-5 3 -5" visible="false">
+      <a-animation attribute="visible" begin="44000" to="true"></a-animation>
+      <a-animation attribute="position" begin="49000" dur="40000" from="-5 3 -5" to="-5 100 -5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: and you are at peace." material="color: white;" position="-3 2 -5" visible="false">
+      <a-animation attribute="visible" begin="44000" to="true"></a-animation>
+      <a-animation attribute="position" begin="49000" dur="40000" from="-3 2 -5" to="-3 100 -5"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: (sync your breaths with the sphere)" material="color: white;" position="-3 2 -8" visible="false">
+      <a-animation attribute="visible" begin="56000" to="true"></a-animation>
+      <a-animation attribute="position" begin="80000" dur="40000" from="-3 2 -8" to="-3 100 -8"></a-animation>
+    </a-entity>
+
+    <!-- C H I L L S P H E R E  A C T I V A T E -->
+    <a-entity geometry="primitive: sphere; radius: 1" material="color: white;" position="-3 2 -5" visible="false"
+      animation="property: scale; dir: alternate;
+      dur: 4500; to: 0.5 0.5 0.5; loop: true">
+
+      <a-animation attribute="visible" begin="56000" to="true"></a-animation>
+
+      <a-animation attribute="position" begin="80000" dur="40000" from="-3 2 -5" to="-3 100 -5"></a-animation>
+    </a-entity>
+
+
+    <a-entity text-geometry="value: Let your" material="color: white;" position="-5 2 -8" visible="false">
+      <a-animation attribute="visible" begin="87000" to="true"></a-animation>
+      <a-animation attribute="position" begin="97000" dur="40000" from="-5 2 -8" to="-5 100 -8"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: anxieties" material="color: white;" position="-1 2 -8" visible="false">
+      <a-animation attribute="visible" begin="87000" to="true"></a-animation>
+      <a-animation attribute="position" begin="92000" dur="40000" from="-1 2 -8" to="-1 100 -8"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: float away." material="color: white;" position="3 2 -8" visible="false">
+      <a-animation attribute="visible" begin="87000" to="true"></a-animation>
+      <a-animation attribute="position" begin="97000" dur="40000" from="3 2 -8" to="3 100 -8"></a-animation>
+    </a-entity>
+
+    <a-entity text-geometry="value: You'll be ok." material="color: white;" position="-2 2 -8" visible="false">
+      <a-animation attribute="visible" begin="108000" to="true"></a-animation>
+    </a-entity>
+
+    <!-- sky cycling -->
+    <a-sky color="#3e5456"
+      animation="property: color; dir: alternate; dur: 7000;
+      easing: easeInSine; loop: true; to: #6a467e"
+
+      sound="src: url(trimmed_conc.mp4); autoplay: true">
+    </a-sky>
+
+</a-scene>
+</body>
+</html>
